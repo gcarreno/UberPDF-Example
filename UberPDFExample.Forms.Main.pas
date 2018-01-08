@@ -179,6 +179,7 @@ var
 begin
   // Load the DLL (if we are dynamic linking) else return true
   {$IFDEF UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER}
+    Log('Loading Dynamic Library');
     FileName := UBER_PDFSDK_SO_NAME;
     Result := (UberPdfSdkDynLibLoad(pAnsiChar(FileName)) <> UBER_FALSE);
     exit;
@@ -190,6 +191,7 @@ function TfrmMain.UnLoadUberPDFSdk: Boolean;
 begin
   // unload the DLL (if we are dynamic linking) else return true
   {$IFDEF UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER}
+    Log('Unloading Dynamic Library');
     Result := (UberPdfSdkDynLibUnload() <> UBER_FALSE);
     exit;
   {$ENDIF}
@@ -220,6 +222,7 @@ begin
   //----------------------------------------------------------------------------
   // Create an UberPdfSdk instance
   //----------------------------------------------------------------------------
+  Log('Initialising System');
   FillChar(UberPdfSdkSystemInitStruct,
            sizeof(UberPdfSdkSystemInitStruct),
            0);
@@ -233,6 +236,7 @@ begin
   //----------------------------------------------------------------------------
   // Create an empty Pdf document
   //----------------------------------------------------------------------------
+  Log('Creating an empty PDF Document');
   if (UberPdfSdk_Pdf_Doc_CreateEmpty(UberPdfSdkInstanceH) <> UBER_STATUS_OK) then begin
     Log('UberPdfSdk_Pdf_Doc_CreateEmpty() failed');
     UberPdfSdk_System_Free(UberPdfSdkInstanceH);
@@ -241,6 +245,7 @@ begin
   //----------------------------------------------------------------------------
   // Create a page
   //----------------------------------------------------------------------------
+  Log('Creating a page');
   PageHandle := CreatePdfPage(UberPdfSdkInstanceH);
   if (PageHandle = UBER_HANDLE_NULL) then begin
     Log('CreatePdfPage failed');
@@ -250,6 +255,7 @@ begin
   //----------------------------------------------------------------------------
   // Insert the page into the beginning of the document
   //----------------------------------------------------------------------------
+  Log('Inserting the page into the beginning of the document');
   if (UberPdfSdk_Pdf_Doc_Pages_InsertPage(UberPdfSdkInstanceH,
                                           PageHandle,
                                           1) <> UBER_STATUS_OK) then begin
@@ -260,6 +266,7 @@ begin
   //----------------------------------------------------------------------------
   // Free the page
   //----------------------------------------------------------------------------
+  Log('Free-ing the page');
   if (UberPdfSdk_Pdf_Page_Free(PageHandle) <> UBER_HANDLE_NULL) then begin
     Log('UberPdfSdk_Pdf_Page_Free() failed');
     UberPdfSdk_System_Free(UberPdfSdkInstanceH);
@@ -268,6 +275,7 @@ begin
   //----------------------------------------------------------------------------
   // Save the document
   //----------------------------------------------------------------------------
+  Log('Saving the document');
   FileName := 'hello-world.pdf';
   if (UberPdfSdk_Pdf_Doc_SaveToFileA(UberPdfSdkInstanceH,
                                      pAnsiChar(FileName),
@@ -291,6 +299,7 @@ begin
   //----------------------------------------------------------------------------
   // Free the UberPdfSdk instance
   //----------------------------------------------------------------------------
+  Log('Free-ing the UberPdfSdk instance');
   if (UberPdfSdk_System_Free(UberPdfSdkInstanceH) <> UBERPDFSDK_INSTANCE_HANDLE_NULL) then begin
     Log('UberUberPdfSdk_System_Free() failed');
     UberPdfSdk_System_Free(UberPdfSdkInstanceH);
