@@ -1,0 +1,55 @@
+object frmMain: TfrmMain
+  Left = 278
+  Height = 444
+  Top = 250
+  Width = 746
+  Caption = 'ÜberPDF Example'
+  ClientHeight = 444
+  ClientWidth = 746
+  object psMain: TPairSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 444
+    Top = 0
+    Width = 746
+    Align = alClient
+    Position = 40
+    SplitterType = pstVertical
+    object PairSplitterSide1: TPairSplitterSide
+      Cursor = crArrow
+      Left = 0
+      Height = 40
+      Top = 0
+      Width = 746
+      ClientWidth = 746
+      ClientHeight = 40
+      object btnExecute: TButton
+        Left = 8
+        Height = 25
+        Top = 8
+        Width = 75
+        Caption = '&Execute'
+        Default = True
+        OnClick = btnExecuteClick
+        TabOrder = 0
+      end
+    end
+    object PairSplitterSide2: TPairSplitterSide
+      Cursor = crArrow
+      Left = 0
+      Height = 399
+      Top = 45
+      Width = 746
+      ClientWidth = 746
+      ClientHeight = 399
+      object memlog: TMemo
+        Left = 0
+        Height = 399
+        Top = 0
+        Width = 746
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+  end
+end
