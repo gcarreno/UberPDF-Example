@@ -18,7 +18,7 @@ $FREEPASCAL$LAZARUS$LAZBUILD --bm=lintel64-static UberPDFExample.lpi
 if [ $? = 0 ]; then
   echo BUILD: Renaming the binary accordingly
   echo
-  cp UberPDFExample UberPDFExample-lintel64-static
+  mv UberPDFExample UberPDFExample-lintel64-static
 else
-  echo BUILD: Cannot find binary to copy
+  echo BUILD: Cannot find binary to move
 fi
