@@ -10,9 +10,39 @@
       <UseXPManifest Value="True"/>
       <Icon Value="0"/>
     </General>
-    <BuildModes Count="4">
+    <BuildModes Count="5">
       <Item1 Name="lintel64" Default="True"/>
-      <Item2 Name="lintel32">
+      <Item2 Name="lintel64-static">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/lintel64/gcc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/lintel64/gcc/librtl;uber/3rdpartylibs/qpdf/lib/lintel64/gcc/librtl;uber/3rdpartylibs/libjpeg/lib/lintel64/gcc/librtl;uber/3rdpartylibs/libpng/lib/lintel64/gcc/librtl;uber/3rdpartylibs/zlib/lib/lintel64/gcc/librtl"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/lintel64/gcc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="linux"/>
+          </CodeGeneration>
+          <Linking>
+            <Options>
+              <PassLinkerOptions Value="True"/>
+              <LinkerOptions Value="-lc -lm -lstdc++ -lgcc_s"/>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUBER_LINTEL64_GCC_LINTEL64"/>
+          </Other>
+        </CompilerOptions>
+      </Item2>
+      <Item3 Name="lintel32">
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
@@ -39,8 +69,8 @@
             <CustomOptions Value="-dUBER_LINTEL32_GCC_LINTEL32"/>
           </Other>
         </CompilerOptions>
-      </Item2>
-      <Item3 Name="wintel64">
+      </Item3>
+      <Item4 Name="wintel64">
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
@@ -67,8 +97,8 @@
             <CustomOptions Value="-dUBER_WINTEL64_MSVC_WINTEL64"/>
           </Other>
         </CompilerOptions>
-      </Item3>
-      <Item4 Name="wintel32">
+      </Item4>
+      <Item5 Name="wintel32">
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
@@ -95,7 +125,7 @@
             <CustomOptions Value="-dUBER_WINTEL32_MSVC_WINTEL32"/>
           </Other>
         </CompilerOptions>
-      </Item4>
+      </Item5>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
@@ -118,6 +148,7 @@
         <Filename Value="UberPDFExample.Forms.Main.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit1>
     </Units>
@@ -145,7 +176,8 @@
       </Options>
     </Linking>
     <Other>
-      <CustomOptions Value="-dUBER_LINTEL64_GCC_LINTEL64"/>
+      <CustomOptions Value="-dUBER_PDFSDK_USE_DYNAMIC_LIB_LOADER
+-dUBER_LINTEL64_GCC_LINTEL64"/>
     </Other>
   </CompilerOptions>
   <Debugging>

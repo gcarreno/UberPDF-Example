@@ -47,12 +47,16 @@ unit UberPDFExample.Forms.Main;
 //------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------
-// UberPdfSdk currently dynamiclly links for Lazarus. Static link version soon.
+// These are the paths for the *.a in order to get a static compile
 //------------------------------------------------------------------------------
-{$DEFINE UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER}
+{$IFNDEF UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER}
+  {$LINKLIB libuberpdfsdk.a}
+  {$LINKLIB libqpdf.a}
+  {$LINKLIB libjpeg.a}
+  {$LINKLIB libpng.a}
+  {$LINKLIB libz.a}
+{$ENDIF}
 //------------------------------------------------------------------------------
-
-
 
 //------------------------------------------------------------------------------
 // include the file to let uber figure out what compiler and version is used

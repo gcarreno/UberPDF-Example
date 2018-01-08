@@ -24,9 +24,17 @@ This is the Linux x68_64 (64 bits) configuration.
 
 This is my main playground.
 
+### `lintel64-static`
+
+This is the Linux x68_64 (64 bits) configuration with static linking.
+
 ### `lintel32`
 
 This is the Linux i386 (32 bits) configuration.
+
+### `lintel32-static`
+
+This is the Linux i386 (32 bits) configuration with static linking.
 
 ### `wintel64`
 
