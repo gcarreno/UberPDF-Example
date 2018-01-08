@@ -6,6 +6,8 @@ object frmMain: TfrmMain
   Caption = 'ÜberPDF Example'
   ClientHeight = 444
   ClientWidth = 746
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   object psMain: TPairSplitter
     Cursor = crVSplit
     Left = 0
