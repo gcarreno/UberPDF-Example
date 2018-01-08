@@ -18,6 +18,10 @@ unit UberPDFExample.Forms.Main;
 // -dUBER_LINTEL32_GCC_LINTEL32
 // Menu->Project->Project Options->Compiler Options->Custom Options: (Linux 64)
 // -dUBER_LINTEL64_GCC_LINTEL64
+//
+// All these have been added under the Build Options available on the project.
+// I've also adjusted the OS and CPU in each Build Option.
+// Make sure you select the correct Build Option for your system.
 
 // YOU MUST ADD TO PROJECT SEARCHPATH the include you are linking to. Examples:
 // Menu->Project->Project Options->Other Unit Files (-Fu): (Linux 64bits)
@@ -33,6 +37,9 @@ unit UberPDFExample.Forms.Main;
 // $(ProjOutDir);Path/To/UberPDFSDK/uberbaselibs/uberpdfsdk/include/lintel32/gcc
 // Menu->Project->Project Options->Libraries (-FU):
 // Path/To/UberPDFSDK/userbaselibs/uberpdfsdk/lib/lintel32/gcc/librtl
+//
+// All these have been added under the Build Options available on the project.
+// Make sure you select the correct Build Option for your system.
 //------------------------------------------------------------------------------
 // AFTER THE "USES" CLAUSE BELOW YOU MUST DEFINE THE PATH TO THE UBER_PDFSDK_SO
 // using the const UBER_PDFSDK_SO_NAME = 'PATH_TO_UBER_PDFSDK_DYN_LIB';
@@ -73,6 +80,17 @@ const UBER_PDFSDK_SO_NAME = './uber/uberbaselibs/uberpdfsdk/lib/lintel32/gcc/lib
 {$ENDIF}
 {$IFDEF UBER_LINTEL64_GCC_LINTEL64}
 const UBER_PDFSDK_SO_NAME = './uber/uberbaselibs/uberpdfsdk/lib/lintel64/gcc/librtl/libuberpdfsdkdyn.so';
+{$ENDIF}
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Make sure these paths are correct
+//------------------------------------------------------------------------------
+{$IFDEF UBER_WINTEL32_MSVC_WINTEL32}
+const UBER_PDFSDK_SO_NAME = '.\uber\uberbaselibs\uberpdfsdk\lib\wintel32\msvc\???\libuberpdfsdkdyn.dll';
+{$ENDIF}
+{$IFDEF UBER_WINTEL64_MSVC_WINTEL64}
+const UBER_PDFSDK_SO_NAME = '.\uber\uberbaselibs\uberpdfsdk\lib\wintel64\msvc\???\libuberpdfsdkdyn.dll';
 {$ENDIF}
 //------------------------------------------------------------------------------
 {$ENDIF}
