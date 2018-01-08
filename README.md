@@ -20,7 +20,7 @@ I have 2 Raspberry Pi's and will, sometime in the future, have a gander at compi
 
 ### `lintel64`
 
-This is the Linux x68_64 (64 bits) configuration.
+This is the Linux x68_64 (64 bits) configuration with dynamic linking.
 
 This is my main playground.
 
@@ -30,7 +30,7 @@ This is the Linux x68_64 (64 bits) configuration with static linking.
 
 ### `lintel32`
 
-This is the Linux i386 (32 bits) configuration.
+This is the Linux i386 (32 bits) configuration with dynamic linking.
 
 ### `lintel32-static`
 
@@ -38,9 +38,9 @@ This is the Linux i386 (32 bits) configuration with static linking.
 
 ### `wintel64`
 
-This is the Windows 64 bits configuration.
+This is the Windows 64 bits configuration with dynamic linking.
 
 ### `wintel32`
 
-This is the Windows 32 bits configuration.
+This is the Windows 32 bits configuration with dynamic linking.
 
