@@ -79,6 +79,9 @@ uses
 //------------------------------------------------------------------------------
 {$IFDEF UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER}
 //------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+// Update these paths acording to your path to the UberPDF folders
+//------------------------------------------------------------------------------
 {$IFDEF UBER_LINTEL32_GCC_LINTEL32}
 const UBER_PDFSDK_SO_NAME = './uber/uberbaselibs/uberpdfsdk/lib/lintel32/gcc/librtl/libuberpdfsdkdyn.so';
 {$ENDIF}
@@ -88,7 +91,7 @@ const UBER_PDFSDK_SO_NAME = './uber/uberbaselibs/uberpdfsdk/lib/lintel64/gcc/lib
 //------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------
-// Make sure these paths are correct
+// Update these paths acording to your path to the UberPDF folders
 //------------------------------------------------------------------------------
 {$IFDEF UBER_WINTEL32_MSVC_WINTEL32}
 const UBER_PDFSDK_SO_NAME = '.\uber\uberbaselibs\uberpdfsdk\lib\wintel32\msvc\???\libuberpdfsdkdyn.dll';
@@ -311,6 +314,7 @@ begin
   end;
   //----------------------------------------------------------------------------
   Log('CreatePdfDocument() succeeded');
+  Log('');
 end;
 
 function TfrmMain.CreatePdfPage(UberPdfSdkInstanceH: UBERPDFSDK_INSTANCE_HANDLE

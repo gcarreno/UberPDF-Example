@@ -50,6 +50,7 @@ object frmMain: TfrmMain
         Top = 0
         Width = 746
         Align = alClient
+        ScrollBars = ssAutoVertical
         TabOrder = 0
       end
     end
