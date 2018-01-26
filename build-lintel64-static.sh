@@ -54,6 +54,17 @@ function check_dependencies() {
         exit 1
     fi
 
+    echo BUILD: Checking UberBuild top folder
+    if [ -d $UBER_SDK ]; then
+        DPES_OK=1
+    else
+        echo BUILD ERROR: Cannot find UberBuild top folder
+        echo SEARCH: $UBER_SDK
+        echo This example expects that UberBuild/SDK reside under the searched folder
+        echo
+        exit 1
+    fi
+
     echo BUILD: Checking for the UberPDF .a library
     if [ -f $UBER_PDF_LIB ]; then
         DEPS_OK=1
