@@ -10,7 +10,7 @@
       <UseXPManifest Value="True"/>
       <Icon Value="0"/>
     </General>
-    <BuildModes Count="6">
+    <BuildModes Count="8">
       <Item1 Name="lintel64" Default="True"/>
       <Item2 Name="lintel64-static">
         <CompilerOptions>
@@ -122,11 +122,69 @@
             </Options>
           </Linking>
           <Other>
-            <CustomOptions Value="-dUBER_WINTEL64_MSVC_WINTEL64"/>
+            <CustomOptions Value="-dUBER_PDFSDK_USE_DYNAMIC_LIB_LOADER
+-dUBER_WINTEL64_MSVC_WINTEL64"/>
           </Other>
         </CompilerOptions>
       </Item5>
-      <Item6 Name="wintel32">
+      <Item6 Name="wintel64-static">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel64/msvc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel64/msvc"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/wintel64/msvc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
+          </CodeGeneration>
+          <Linking>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUBER_WINTEL64_MSVC_WINTEL64"/>
+          </Other>
+        </CompilerOptions>
+      </Item6>
+      <Item7 Name="wintel32">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel32/msvc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel32/msvc"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/wintel32/msvc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+          </CodeGeneration>
+          <Linking>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUBER_PDFSDK_USE_DYNAMIC_LIB_LOADER
+-dUBER_WINTEL32_MSVC_WINTEL32"/>
+          </Other>
+        </CompilerOptions>
+      </Item7>
+      <Item8 Name="wintel32-static">
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
@@ -153,7 +211,7 @@
             <CustomOptions Value="-dUBER_WINTEL32_MSVC_WINTEL32"/>
           </Other>
         </CompilerOptions>
-      </Item6>
+      </Item8>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
@@ -167,7 +225,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="5">
       <Unit0>
         <Filename Value="UberPDFExample.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -179,6 +237,18 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="UberPDFExample.Examples.AddJPEG.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="UberPDFExample.Examples.HelloWorld.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="UberPDFExample.Common.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit4>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

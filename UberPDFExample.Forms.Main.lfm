@@ -41,6 +41,7 @@ object frmMain: TfrmMain
         Width = 134
         AutoSize = True
         Caption = 'Example: Add JPG'
+        OnClick = btnEx_AddJPGClick
         TabOrder = 1
       end
       object lblHeader: TLabel
