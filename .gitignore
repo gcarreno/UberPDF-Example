@@ -2,5 +2,8 @@
 /backup
 /uber
 UberPDFExample
+UberPDFExample.exe
 UberPDFExample-*
+UberPDFExample-*.exe
 hello-world.pdf
+addjpeg.pdf
