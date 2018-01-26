@@ -9,46 +9,62 @@ object frmMain: TfrmMain
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   object psMain: TPairSplitter
-    Cursor = crVSplit
     Left = 0
     Height = 444
     Top = 0
     Width = 746
     Align = alClient
-    Position = 40
-    SplitterType = pstVertical
-    object PairSplitterSide1: TPairSplitterSide
+    Position = 260
+    object pssButtons: TPairSplitterSide
       Cursor = crArrow
       Left = 0
-      Height = 40
+      Height = 444
       Top = 0
-      Width = 746
-      ClientWidth = 746
-      ClientHeight = 40
-      object btnExecute: TButton
+      Width = 260
+      ClientWidth = 260
+      ClientHeight = 444
+      object btnEx_HelloWorld: TButton
         Left = 8
-        Height = 25
-        Top = 8
-        Width = 75
-        Caption = '&Execute'
+        Height = 29
+        Top = 104
+        Width = 157
+        AutoSize = True
+        Caption = 'Example: Hello World'
         Default = True
-        OnClick = btnExecuteClick
+        OnClick = btnEx_HelloWorldClick
         TabOrder = 0
       end
+      object btnEx_AddJPG: TButton
+        Left = 8
+        Height = 29
+        Top = 136
+        Width = 134
+        AutoSize = True
+        Caption = 'Example: Add JPG'
+        TabOrder = 1
+      end
+      object lblHeader: TLabel
+        Left = 8
+        Height = 85
+        Top = 8
+        Width = 245
+        Caption = 'UberPDF Examples'#10#10'Each button will create and example.'#10'There is no sequence to be followed.'#10'Press buttons in any order.'
+        ParentColor = False
+      end
     end
-    object PairSplitterSide2: TPairSplitterSide
+    object pssLog: TPairSplitterSide
       Cursor = crArrow
-      Left = 0
-      Height = 399
-      Top = 45
-      Width = 746
-      ClientWidth = 746
-      ClientHeight = 399
+      Left = 265
+      Height = 444
+      Top = 0
+      Width = 481
+      ClientWidth = 481
+      ClientHeight = 444
       object memlog: TMemo
         Left = 0
-        Height = 399
+        Height = 444
         Top = 0
-        Width = 746
+        Width = 481
         Align = alClient
         ScrollBars = ssAutoVertical
         TabOrder = 0

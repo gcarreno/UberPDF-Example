@@ -8,7 +8,7 @@
         <Filename Value="UberPDFExample.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos Y="20"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -19,9 +19,9 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="305"/>
-        <CursorPos X="9" Y="317"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="124"/>
+        <CursorPos X="16" Y="139"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -42,7 +42,7 @@
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit3>
     </Units>
-    <JumpHistory Count="18" HistoryIndex="17">
+    <JumpHistory Count="24" HistoryIndex="23">
       <Position1>
         <Filename Value="UberPDFExample.Forms.Main.pas"/>
       </Position1>
@@ -114,6 +114,30 @@
         <Filename Value="UberPDFExample.Forms.Main.pas"/>
         <Caret Line="56" Column="5" TopLine="43"/>
       </Position18>
+      <Position19>
+        <Filename Value="UberPDFExample.Forms.Main.pas"/>
+        <Caret Line="317" Column="9" TopLine="305"/>
+      </Position19>
+      <Position20>
+        <Filename Value="UberPDFExample.Forms.Main.pas"/>
+        <Caret Line="318" Column="9" TopLine="306"/>
+      </Position20>
+      <Position21>
+        <Filename Value="UberPDFExample.Forms.Main.pas"/>
+        <Caret Line="137" Column="21" TopLine="122"/>
+      </Position21>
+      <Position22>
+        <Filename Value="UberPDFExample.Forms.Main.pas"/>
+        <Caret Line="335" Column="3" TopLine="320"/>
+      </Position22>
+      <Position23>
+        <Filename Value="UberPDFExample.Forms.Main.pas"/>
+        <Caret Line="321" Column="10" TopLine="320"/>
+      </Position23>
+      <Position24>
+        <Filename Value="UberPDFExample.Forms.Main.pas"/>
+        <Caret Line="138" Column="16" TopLine="124"/>
+      </Position24>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

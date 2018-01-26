@@ -116,12 +116,14 @@ type
   { TfrmMain }
 
   TfrmMain = class(TForm)
-    btnExecute: TButton;
+    btnEx_HelloWorld: TButton;
+    btnEx_AddJPG: TButton;
+    lblHeader: TLabel;
     memlog: TMemo;
     psMain: TPairSplitter;
-    PairSplitterSide1: TPairSplitterSide;
-    PairSplitterSide2: TPairSplitterSide;
-    procedure btnExecuteClick(Sender: TObject);
+    pssButtons: TPairSplitterSide;
+    pssLog: TPairSplitterSide;
+    procedure btnEx_HelloWorldClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
@@ -132,9 +134,9 @@ type
     function UnLoadUberPDFSdk: Boolean;
     function IsUberPDFSdkLoaded: Boolean;
   public
-    procedure CreatePdfDocument;
-    function CreatePdfPage(UberPdfSdkInstanceH: UBERPDFSDK_INSTANCE_HANDLE): UBERPDFSDK_PDF_PAGE_HANDLE;
-    procedure AddUberPDFFancyTextLine(var ContentString : AnsiString);
+    procedure Ex_HelloWorld_CreatePdfDocument;
+    function Ex_HelloWorld_CreatePdfPage(UberPdfSdkInstanceH: UBERPDFSDK_INSTANCE_HANDLE): UBERPDFSDK_PDF_PAGE_HANDLE;
+    procedure Ex_HelloWorld_AddUberPDFFancyTextLine(var ContentString : AnsiString);
   end;
 
 var
@@ -161,11 +163,11 @@ begin
   UnLoadUberPDFSdk();
 end;
 
-procedure TfrmMain.btnExecuteClick(Sender: TObject);
+procedure TfrmMain.btnEx_HelloWorldClick(Sender: TObject);
 begin
-  btnExecute.Enabled := False;
-  CreatePdfDocument();
-  btnExecute.Enabled := True;
+  btnEx_HelloWorld.Enabled := False;
+  Ex_HelloWorld_CreatePdfDocument();
+  btnEx_HelloWorld.Enabled := True;
 end;
 
 procedure TfrmMain.LogClear;
@@ -215,7 +217,7 @@ begin
   Result := True;
 end;
 
-procedure TfrmMain.CreatePdfDocument;
+procedure TfrmMain.Ex_HelloWorld_CreatePdfDocument;
 var
   UberPdfSdkSystemInitStruct : UBERPDFSDK_SYSTEM_INIT_STRUCT;
   UberPdfSdkInstanceH : UBERPDFSDK_INSTANCE_HANDLE;
@@ -253,7 +255,7 @@ begin
   // Create a page
   //----------------------------------------------------------------------------
   Log('Creating a page');
-  PageHandle := CreatePdfPage(UberPdfSdkInstanceH);
+  PageHandle := Ex_HelloWorld_CreatePdfPage(UberPdfSdkInstanceH);
   if (PageHandle = UBER_HANDLE_NULL) then begin
     Log('CreatePdfPage failed');
     UberPdfSdk_System_Free(UberPdfSdkInstanceH);
@@ -317,7 +319,7 @@ begin
   Log('');
 end;
 
-function TfrmMain.CreatePdfPage(UberPdfSdkInstanceH: UBERPDFSDK_INSTANCE_HANDLE
+function TfrmMain.Ex_HelloWorld_CreatePdfPage(UberPdfSdkInstanceH: UBERPDFSDK_INSTANCE_HANDLE
   ): UBERPDFSDK_PDF_PAGE_HANDLE;
 var
   PageHandle : UBERPDFSDK_PDF_PAGE_HANDLE;
@@ -429,7 +431,7 @@ begin
   //   starting 36 points from page edge bottom  (72 equals one inch)
   //----------------------------------------------------------------------------
   ContentString := ContentString + '1 0 0 1 36 36 Tm ';
-  AddUberPDFFancyTextLine(ContentString);
+  Ex_HelloWorld_AddUberPDFFancyTextLine(ContentString);
   //----------------------------------------------------------------------------
   // We have finished outputting text - Send the 'End Text' sequence
   //----------------------------------------------------------------------------
@@ -462,7 +464,7 @@ begin
   //----------------------------------------------------------------------------
 end;
 
-procedure TfrmMain.AddUberPDFFancyTextLine(var ContentString: AnsiString);
+procedure TfrmMain.Ex_HelloWorld_AddUberPDFFancyTextLine(var ContentString: AnsiString);
 begin
   //----------------------------------------------------------------------------
   // Output the string 'UberPDF(tm)sdk' at the current positon with:
