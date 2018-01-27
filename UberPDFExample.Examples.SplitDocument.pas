@@ -33,7 +33,7 @@ var
 //------------------------------------------------------------------------------
 begin
   //----------------------------------------------------------------------------
-  FileNameIn  := 'NASA_Solar_Dynamics_Observatory_PressKit.pdf';
+  FileNameIn  := 'PDF_files/NASA_Solar_Dynamics_Observatory_PressKit.pdf';
   FileNameOut := 'split-document.pdf';
   //----------------------------------------------------------------------------
   if (not(IsUberPDFSdkLoaded())) then begin
