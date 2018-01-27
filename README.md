@@ -101,6 +101,8 @@ This is the Linux ARM (64 bits) build mode with static linking.
 
 ### `linarm32`
 
+This is the Linux ARM (32 bits) build mode with dynamic linking.
 
 ### `linarm32-static`
 
+This is the Linux ARM (32 bits) build mode with static linking.
