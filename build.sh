@@ -80,12 +80,12 @@ function check_dependencies() {
         return
     fi
 
-    echo -n "BUILD:   Checking for the UberPDF .so library"
+    echo -n "BUILD:   Checking for the UberPDF .so/.a library"
     if [ -f $UBER_PDF_LIB ]; then
         echo -e " FOUND"
         UBER_DEPS_OK=1
     else
-        echo -e "\nBUILD ERROR: Cannot find UberPDF .so library"
+        echo -e "\nBUILD ERROR: Cannot find UberPDF .so/.a library"
         echo -e "SEARCH: $UBER_PDF_LIB"
         echo -e "        Without this library the binary will not run with success\n"
         UBER_DEPS_OK=0
@@ -113,7 +113,14 @@ function copy_examples() {
 
 function build_example() {
     UBER_PDF_LIB_DIR=$UBER_SDK_DIR/uberbaselibs/uberpdfsdk/lib/$UBER_PLATFORM/gcc/librtl
-    UBER_PDF_LIB=$UBER_PDF_LIB_DIR/libuberpdfsdkdyn.so
+    case "$BUILD_MODE" in
+        *-static)
+            UBER_PDF_LIB=$UBER_PDF_LIB_DIR/libuberpdfsdk.a
+            ;;
+        *)
+            UBER_PDF_LIB=$UBER_PDF_LIB_DIR/libuberpdfsdkdyn.so
+            ;;
+    esac
 
     echo -e "BUILD: Building..."
 
@@ -122,8 +129,8 @@ function build_example() {
     if [ "x$UBER_DEPS_OK" = "x1" ]; then
         clean_examples
         echo -e "BUILD: Compiling..."
-        echo -e "BUILD:   executing: \$ $LAZBUILD_BIN --bm=$UBER_PLATFORM $BUILD_LPI"
-        $LAZBUILD_BIN --bm=$BUILD_MODE $BUILD_LPI > /tmp/temp_$BUILD_MODE.log 2>&1
+        echo -e "BUILD:   executing: \$ $LAZBUILD_BIN -B --bm=$UBER_PLATFORM $BUILD_LPI"
+        $LAZBUILD_BIN -B --bm=$BUILD_MODE $BUILD_LPI > /tmp/temp_$BUILD_MODE.log 2>&1
 
         if [ $? = 0 ]; then
             echo -e "BUILD: Compiling DONE"
