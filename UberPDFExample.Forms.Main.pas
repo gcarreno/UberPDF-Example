@@ -74,6 +74,7 @@ uses
   UberPDFExample.Common,
   UberPDFExample.Examples.HelloWorld,
   UberPDFExample.Examples.AddJPEG,
+  UberPDFExample.Examples.SplitDocument,
 {$IFDEF UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER}
   libuberpdfsdkdyn_pascal;
 {$ELSE}
@@ -115,6 +116,7 @@ type
   TfrmMain = class(TForm)
     btnEx_HelloWorld: TButton;
     btnEx_AddJPG: TButton;
+    btnEx_SplitDocument: TButton;
     lblHeader: TLabel;
     memlog: TMemo;
     psMain: TPairSplitter;
@@ -122,6 +124,7 @@ type
     pssLog: TPairSplitterSide;
     procedure btnEx_AddJPGClick(Sender: TObject);
     procedure btnEx_HelloWorldClick(Sender: TObject);
+    procedure btnEx_SplitDocumentClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
@@ -158,14 +161,21 @@ end;
 procedure TfrmMain.btnEx_HelloWorldClick(Sender: TObject);
 begin
   btnEx_HelloWorld.Enabled := False;
-  UberPDFExample.Examples.HelloWorld.CreatePdfDocument();
+  UberPDFExample.Examples.HelloWorld.CreatePdfDocument;
   btnEx_HelloWorld.Enabled := True;
+end;
+
+procedure TfrmMain.btnEx_SplitDocumentClick(Sender: TObject);
+begin
+  btnEx_SplitDocument.Enabled := False;
+  UberPDFExample.Examples.SplitDocument.CreatePdfDocument;
+  btnEx_SplitDocument.Enabled := True;
 end;
 
 procedure TfrmMain.btnEx_AddJPGClick(Sender: TObject);
 begin
   btnEx_AddJPG.Enabled := False;
-  UberPDFExample.Examples.AddJPEG.CreatePdfDocument();
+  UberPDFExample.Examples.AddJPEG.CreatePdfDocument;
   btnEx_AddJPG.Enabled := True;
 end;
 

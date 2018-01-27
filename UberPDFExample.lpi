@@ -225,7 +225,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="5">
+    <Units Count="6">
       <Unit0>
         <Filename Value="UberPDFExample.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -249,6 +249,10 @@
         <Filename Value="UberPDFExample.Common.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="UberPDFExample.Examples.SplitDocument.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit5>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

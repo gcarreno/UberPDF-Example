@@ -1,28 +1,28 @@
 object frmMain: TfrmMain
   Left = 278
-  Height = 444
+  Height = 497
   Top = 250
-  Width = 746
+  Width = 973
   Caption = 'ÜberPDF Example'
-  ClientHeight = 444
-  ClientWidth = 746
+  ClientHeight = 497
+  ClientWidth = 973
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   object psMain: TPairSplitter
     Left = 0
-    Height = 444
+    Height = 497
     Top = 0
-    Width = 746
+    Width = 973
     Align = alClient
     Position = 260
     object pssButtons: TPairSplitterSide
       Cursor = crArrow
       Left = 0
-      Height = 444
+      Height = 497
       Top = 0
       Width = 260
       ClientWidth = 260
-      ClientHeight = 444
+      ClientHeight = 497
       object btnEx_HelloWorld: TButton
         Left = 8
         Height = 29
@@ -52,20 +52,30 @@ object frmMain: TfrmMain
         Caption = 'UberPDF Examples'#10#10'Each button will create and example.'#10'There is no sequence to be followed.'#10'Press buttons in any order.'
         ParentColor = False
       end
+      object btnEx_SplitDocument: TButton
+        Left = 8
+        Height = 29
+        Top = 168
+        Width = 180
+        AutoSize = True
+        Caption = 'Example: Spilt Document'
+        OnClick = btnEx_SplitDocumentClick
+        TabOrder = 2
+      end
     end
     object pssLog: TPairSplitterSide
       Cursor = crArrow
       Left = 265
-      Height = 444
+      Height = 497
       Top = 0
-      Width = 481
-      ClientWidth = 481
-      ClientHeight = 444
+      Width = 708
+      ClientWidth = 708
+      ClientHeight = 497
       object memlog: TMemo
         Left = 0
-        Height = 444
+        Height = 497
         Top = 0
-        Width = 481
+        Width = 708
         Align = alClient
         ScrollBars = ssAutoVertical
         TabOrder = 0
