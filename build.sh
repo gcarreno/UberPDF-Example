@@ -128,9 +128,11 @@ function build_example() {
         if [ $? = 0 ]; then
             echo -e "BUILD: Compiling DONE"
             BUILD_OK=1
+            rm -f /tmp/temp_$BUILD_MODE.log > /dev/null 2>&1
             copy_examples
         else
             echo -e "BUILD ERROR: Compile did not succeed!"
+            echo -e "BUILD ERORR: LOG '/tmp/temp_$BUILD_MODE.log'"
             echo -e "---- LOG -- (last 20 lines) -----------------------"
             tail -20 /tmp/temp_$BUILD_MODE.log
             echo -e "---- LOG ------------------------------------------\n"
@@ -197,6 +199,7 @@ case "$1" in
         ;;
     *)
         echo -e "BUILD: No known platform suggested, will build for '$UBER_PLATFORM'."
+        BUILD_MODE="$UBER_PLATFORM"
         build_example
         ;;
 esac
