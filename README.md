@@ -19,13 +19,19 @@ This example will produce the PDF file `hello-world.pdf`.
 
 This example will produce the PDF file `add-jpeg.pdf`.
 
+It needs the image file at `uber/3rdpartylibs/_testfiles/testfiles/jpg/uberdude-uberairshare-stage-board-01.jpg`.
+
 ### Split Document
 
 This example will produce the PDF file `split-document.pdf`.
 
+It needs the PDF file at `PDF_files/NASA_Solar_Dynamics_Observatory_PressKit.pdf`.
+
 ### Stamp Document
 
 This example will produce the PDF file `stamp-document.pdf`.
+
+It needs these PDF files at `PDF_files/DocumentToStamp.pdf` and `PDF_files/PlatypusStamp.pdf`.
 
 ## Project Build Modes
 
@@ -41,7 +47,7 @@ I have 2 Raspberry Pi's and will, sometime in the future, have a gander at compi
 
 ### `lintel64`
 
-This is the Linux x68_64 (64 bits) configuration with dynamic linking.
+This is the Linux x68_64 (64 bits) build mode with dynamic linking.
 
 There's a build script: `build-lintel64.sh`, that triggers the build mode for Linux-x86_64
 
@@ -49,33 +55,52 @@ This is my main playground.
 
 ### `lintel64-static`
 
-This is the Linux x68_64 (64 bits) configuration with static linking.
+This is the Linux x68_64 (64 bits) build mode with static linking.
 
-There's a build script: `build-lintel64-static.sh`, that triggers the build mode for Linux-x86_64
+There's a build script: `build-lintel64-static.sh`, that triggers the build mode for Linux-x86_64 with static linking.
 
 This and `lintel64` have been tested on my environment and work accordingly.
 
 ### `lintel32`
 
-This is the Linux i386 (32 bits) configuration with dynamic linking.
+This is the Linux i386 (32 bits) build mode with dynamic linking.
 
 ### `lintel32-static`
 
-This is the Linux i386 (32 bits) configuration with static linking.
+This is the Linux i386 (32 bits) build mode with static linking.
 
 ### `wintel64`
 
-This is the Windows 64 bits configuration with dynamic linking.
+This is the Windows 64 bits build mode with dynamic linking.
+
+**Status**: Fiddling with Microsoft Visual C (MSVC) Community to get UberSDK built.
 
 ### `wintel64-static`
 
-This is the Windows 64 bits configuration with static linking.
+This is the Windows 64 bits build mode with static linking.
 
 ### `wintel32`
 
-This is the Windows 32 bits configuration with dynamic linking.
+This is the Windows 32 bits build mode with dynamic linking.
 
 ### `wintel32-static`
 
-This is the Windows 32 bits configuration with static linking.
+This is the Windows 32 bits build mode with static linking.
+
+## Future Build Modes
+
+### `linarm64`
+
+This is the Linux ARM (64 bits) build mode with dynamic linking.
+
+**Status**: Need to re-install my Raspberry Pi on a bigger SD Card.
+
+### `linarm64-static`
+
+This is the Linux ARM (64 bits) build mode with static linking.
+
+### `linarm32`
+
+
+### `linarm32-static`
 
