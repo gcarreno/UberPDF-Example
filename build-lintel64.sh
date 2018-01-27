@@ -33,6 +33,7 @@ function check_dependencies() {
     if [ -x $LAZBUILD_BIN ]; then
         DEPS_OK=1
     else
+        DEPS_OK=0
         echo BUILD ERROR: Cannot find lazbuild binary
         echo SEARCH: $LAZBUILD_BIN
         echo
@@ -43,6 +44,7 @@ function check_dependencies() {
     if [ -d $UBER_SDK ]; then
         DPES_OK=1
     else
+        DEPS_OK=0
         echo BUILD ERROR: Cannot find UberBuild top folder
         echo SEARCH: $UBER_SDK
         echo This example expects that UberBuild/SDK reside under the searched folder
@@ -54,6 +56,7 @@ function check_dependencies() {
     if [ -f $UBER_PDF_LIB ]; then
         DEPS_OK=1
     else
+        DEPS_OK=0
         echo BUILD ERROR: Cannot find UberPDF .so library
         echo SEARCH: $UBER_PDF_LIB
         echo Without this library the binary will not run with success

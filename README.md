@@ -45,19 +45,28 @@ I have Lazarus configured with cross-compiling for win32 and win64 but I didn't 
 
 I have 2 Raspberry Pi's and will, sometime in the future, have a gander at compiling this on them. I will add the apropriate Build Options once I do get around it.
 
+### Build Script
+
+The build script `build.sh`, builds the various binaries.
+
+At the moment it knows the following build modes:
+
+ 1. lintel64        (Linux, Intel, 64 bits)
+ 2. lintel64-static (Linux, Intel, 64 bits, static linking)
+ 3. lintel32        (Linux, Intel, 32 bits)
+ 4. lintel32-static (Linux, Intel, 32 bits, static linking)
+ 5. -h, --help      (Prints the help message)
+ 6. -v, --version   (Prints the script version)
+
 ### `lintel64`
 
 This is the Linux x68_64 (64 bits) build mode with dynamic linking.
-
-There's a build script: `build-lintel64.sh`, that triggers the build mode for Linux-x86_64
 
 This is my main playground.
 
 ### `lintel64-static`
 
 This is the Linux x68_64 (64 bits) build mode with static linking.
-
-There's a build script: `build-lintel64-static.sh`, that triggers the build mode for Linux-x86_64 with static linking.
 
 This and `lintel64` have been tested on my environment and work accordingly.
 
