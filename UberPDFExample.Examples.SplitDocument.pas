@@ -5,7 +5,7 @@ unit UberPDFExample.Examples.SplitDocument;
 interface
 
 uses
-  Classes, SysUtils,
+  Classes, SysUtils, LCLIntF,
   UberPDFExample.Common,
 {$IFDEF UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER}
   libuberpdfsdkdyn_pascal;
@@ -140,6 +140,8 @@ begin
     UberPdfSdk_System_Free(UberPdfSdkImportFromInstanceH);
     exit;
   end;
+  frmMain.Log('Example Split Document: Opening the document with the system default viewer');
+  OpenDocument(FileNameOut);
   //----------------------------------------------------------------------------
   // Free the UberPdfSdkExportToInstanceH instance
   //----------------------------------------------------------------------------

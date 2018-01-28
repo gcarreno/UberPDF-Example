@@ -5,7 +5,7 @@ unit UberPDFExample.Examples.AddJPEG;
 interface
 
 uses
-  Classes, SysUtils,
+  Classes, SysUtils, LCLIntF,
   UberPDFExample.Common,
 {$IFDEF UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER}
   libuberpdfsdkdyn_pascal;
@@ -110,6 +110,8 @@ begin
     UberPdfSdk_System_Free(UberPdfSdkInstanceH);
     exit;
   end;
+  frmMain.Log('Example Add JPEG: Opening the document with the system default viewer');
+  OpenDocument(FileName);
   //----------------------------------------------------------------------------
   // Free the UberPdfSdk instance
   //----------------------------------------------------------------------------
