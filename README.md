@@ -27,9 +27,9 @@ This example will produce the PDF file `split-document.pdf`.
 
 It needs the PDF file at `PDF_files/NASA_Solar_Dynamics_Observatory_PressKit.pdf`.
 
-### Stamp Document
+### Stamped Document
 
-This example will produce the PDF file `stamp-document.pdf`.
+This example will produce the PDF file `stamped-document.pdf`.
 
 It needs these PDF files at `PDF_files/DocumentToStamp.pdf` and `PDF_files/PlatypusStamp.pdf`.
 

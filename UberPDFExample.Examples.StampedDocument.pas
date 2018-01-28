@@ -4,6 +4,16 @@ unit UberPDFExample.Examples.StampedDocument;
 
 interface
 
+//------------------------------------------------------------------------------
+// include the file to let uber figure out what compiler and version is used
+//------------------------------------------------------------------------------
+{$INCLUDE 'uber_base_unit_compiler_version_defs.pascal-inc'}
+//------------------------------------------------------------------------------
+// AFTER THE "USES" CLAUSE BELOW YOU MUST DEFINE THE PATH TO THE UBER_PDFSDK_SO
+// using the const UBER_PDFSDK_SO_NAME = 'PATH_TO_UBER_PDFSDK_DYN_LIB';
+// (see below).
+//------------------------------------------------------------------------------
+
 uses
   Classes, SysUtils, LCLIntF, Math,
   UberPDFExample.Common,
@@ -12,6 +22,12 @@ uses
 {$ELSE}
   uberpdfsdk_pascal;
 {$ENDIF}
+
+//------------------------------------------------------------------------------
+// Include the Uber base types
+//------------------------------------------------------------------------------
+{$INCLUDE 'uber_base_unit_defs.pascal-inc'}
+//------------------------------------------------------------------------------
 
 procedure CreatePdfDocument;
 function StampPage(UberPdfSdkDocumentInstanceH : UBERPDFSDK_INSTANCE_HANDLE;
@@ -365,7 +381,7 @@ begin
   end;
   //----------------------------------------------------------------------------
   frmMain.Log('Example Stamped Document: CreatePdfDocument() succeeded');
-  //----------------------------------------------------------------------------
+  frmMain.Log('');
 end;
 
 function StampPage(UberPdfSdkDocumentInstanceH: UBERPDFSDK_INSTANCE_HANDLE;
