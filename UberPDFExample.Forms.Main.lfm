@@ -62,6 +62,16 @@ object frmMain: TfrmMain
         OnClick = btnEx_SplitDocumentClick
         TabOrder = 2
       end
+      object btnEx_StampedDocument: TButton
+        Left = 8
+        Height = 29
+        Top = 200
+        Width = 210
+        AutoSize = True
+        Caption = 'Example: Stamped Document'
+        OnClick = btnEx_StampedDocumentClick
+        TabOrder = 3
+      end
     end
     object pssLog: TPairSplitterSide
       Cursor = crArrow

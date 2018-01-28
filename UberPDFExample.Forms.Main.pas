@@ -56,7 +56,8 @@ uses
   UberPDFExample.Common,
   UberPDFExample.Examples.HelloWorld,
   UberPDFExample.Examples.AddJPEG,
-  UberPDFExample.Examples.SplitDocument;
+  UberPDFExample.Examples.SplitDocument,
+  UberPDFExample.Examples.StampedDocument;
 
 type
 
@@ -65,6 +66,7 @@ type
     btnEx_HelloWorld: TButton;
     btnEx_AddJPG: TButton;
     btnEx_SplitDocument: TButton;
+    btnEx_StampedDocument: TButton;
     lblHeader: TLabel;
     memlog: TMemo;
     psMain: TPairSplitter;
@@ -73,6 +75,7 @@ type
     procedure btnEx_AddJPGClick(Sender: TObject);
     procedure btnEx_HelloWorldClick(Sender: TObject);
     procedure btnEx_SplitDocumentClick(Sender: TObject);
+    procedure btnEx_StampedDocumentClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
@@ -118,6 +121,13 @@ begin
   btnEx_SplitDocument.Enabled := False;
   UberPDFExample.Examples.SplitDocument.CreatePdfDocument;
   btnEx_SplitDocument.Enabled := True;
+end;
+
+procedure TfrmMain.btnEx_StampedDocumentClick(Sender: TObject);
+begin
+  btnEx_StampedDocument.Enabled := False;
+  UberPDFExample.Examples.StampedDocument.CreatePdfDocument;
+  btnEx_StampedDocument.Enabled := True;
 end;
 
 procedure TfrmMain.btnEx_AddJPGClick(Sender: TObject);

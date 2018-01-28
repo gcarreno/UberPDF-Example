@@ -208,12 +208,12 @@
         </CompilerOptions>
       </Item7>
     </BuildModes>
-    <Units Count="9">
+    <Units Count="10">
       <Unit0>
         <Filename Value="UberPDFExample.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="23" Y="5"/>
-        <UsageCount Value="34"/>
+        <CursorPos X="35" Y="10"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -222,9 +222,11 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="106"/>
-        <UsageCount Value="34"/>
+        <TopLine Value="115"/>
+        <CursorPos X="61" Y="129"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -234,7 +236,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="55"/>
         <CursorPos X="17" Y="62"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="28"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -243,7 +245,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="95"/>
         <CursorPos X="11" Y="113"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -252,17 +254,15 @@
         <EditorIndex Value="4"/>
         <TopLine Value="94"/>
         <CursorPos Y="115"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="UberPDFExample.Examples.SplitDocument.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="122"/>
-        <CursorPos X="27" Y="144"/>
-        <UsageCount Value="23"/>
+        <CursorPos Y="23"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -289,124 +289,136 @@
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit8>
+      <Unit9>
+        <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="6"/>
+        <CursorPos X="36" Y="8"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit9>
     </Units>
-    <JumpHistory Count="29" HistoryIndex="28">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="622" Column="45" TopLine="607"/>
+        <Caret Line="77" Column="41" TopLine="66"/>
       </Position1>
       <Position2>
         <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="344" Column="10" TopLine="339"/>
+        <Caret Line="171" Column="59" TopLine="62"/>
       </Position2>
       <Position3>
         <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="310" Column="60" TopLine="299"/>
+        <Caret Line="77" Column="21" TopLine="40"/>
       </Position3>
       <Position4>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="622" Column="31" TopLine="607"/>
+        <Filename Value="UberPDFExample.Common.pas"/>
+        <Caret Line="60" TopLine="43"/>
       </Position4>
       <Position5>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="149" Column="22" TopLine="131"/>
+        <Filename Value="UberPDFExample.Common.pas"/>
+        <Caret Line="42" TopLine="28"/>
       </Position5>
       <Position6>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="256" Column="31" TopLine="242"/>
+        <Filename Value="UberPDFExample.Common.pas"/>
+        <Caret Line="62" Column="14" TopLine="54"/>
       </Position6>
       <Position7>
-        <Filename Value="UberPDFExample.lpr"/>
-        <Caret Line="17"/>
+        <Filename Value="UberPDFExample.Common.pas"/>
+        <Caret Line="31" Column="37" TopLine="17"/>
       </Position7>
       <Position8>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="129" Column="5" TopLine="115"/>
+        <Filename Value="UberPDFExample.Common.pas"/>
+        <Caret Line="31" Column="21" TopLine="17"/>
       </Position8>
       <Position9>
         <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="135" Column="27" TopLine="115"/>
+        <Caret Line="49" TopLine="28"/>
       </Position9>
       <Position10>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="393" Column="37" TopLine="376"/>
-      </Position10>
-      <Position11>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="185" TopLine="170"/>
-      </Position11>
-      <Position12>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="164" Column="23" TopLine="150"/>
-      </Position12>
-      <Position13>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="171" Column="34" TopLine="150"/>
-      </Position13>
-      <Position14>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="395" TopLine="296"/>
-      </Position14>
-      <Position15>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="168" Column="52" TopLine="147"/>
-      </Position15>
-      <Position16>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="77" Column="41" TopLine="66"/>
-      </Position16>
-      <Position17>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="171" Column="59" TopLine="62"/>
-      </Position17>
-      <Position18>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="77" Column="21" TopLine="40"/>
-      </Position18>
-      <Position19>
-        <Filename Value="UberPDFExample.Common.pas"/>
-        <Caret Line="60" TopLine="43"/>
-      </Position19>
-      <Position20>
-        <Filename Value="UberPDFExample.Common.pas"/>
-        <Caret Line="42" TopLine="28"/>
-      </Position20>
-      <Position21>
-        <Filename Value="UberPDFExample.Common.pas"/>
-        <Caret Line="62" Column="14" TopLine="54"/>
-      </Position21>
-      <Position22>
-        <Filename Value="UberPDFExample.Common.pas"/>
-        <Caret Line="31" Column="37" TopLine="17"/>
-      </Position22>
-      <Position23>
-        <Filename Value="UberPDFExample.Common.pas"/>
-        <Caret Line="31" Column="21" TopLine="17"/>
-      </Position23>
-      <Position24>
-        <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="49" TopLine="28"/>
-      </Position24>
-      <Position25>
         <Filename Value="UberPDFExample.Examples.HelloWorld.pas"/>
         <Caret Line="176" Column="31" TopLine="164"/>
-      </Position25>
-      <Position26>
+      </Position10>
+      <Position11>
         <Filename Value="UberPDFExample.Examples.HelloWorld.pas"/>
         <Caret Line="111" Column="30" TopLine="90"/>
-      </Position26>
-      <Position27>
+      </Position11>
+      <Position12>
         <Filename Value="UberPDFExample.Examples.AddJPEG.pas"/>
         <Caret Line="30" Column="13" TopLine="8"/>
-      </Position27>
-      <Position28>
+      </Position12>
+      <Position13>
         <Filename Value="UberPDFExample.Examples.SplitDocument.pas"/>
         <Caret Line="36" Column="29" TopLine="27"/>
-      </Position28>
-      <Position29>
+      </Position13>
+      <Position14>
         <Filename Value="UberPDFExample.Examples.AddJPEG.pas"/>
         <Caret Line="113" Column="24" TopLine="92"/>
+      </Position14>
+      <Position15>
+        <Filename Value="UberPDFExample.Examples.SplitDocument.pas"/>
+        <Caret Line="143" Column="38" TopLine="122"/>
+      </Position15>
+      <Position16>
+        <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
+        <Caret Line="22" Column="47"/>
+      </Position16>
+      <Position17>
+        <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
+        <Caret Line="70" Column="8" TopLine="47"/>
+      </Position17>
+      <Position18>
+        <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
+        <Caret Line="45" Column="10" TopLine="20"/>
+      </Position18>
+      <Position19>
+        <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
+        <Caret Line="16" Column="13" TopLine="2"/>
+      </Position19>
+      <Position20>
+        <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
+        <Caret Line="340" Column="10" TopLine="316"/>
+      </Position20>
+      <Position21>
+        <Filename Value="UberPDFExample.Examples.SplitDocument.pas"/>
+        <Caret Line="143" Column="39" TopLine="128"/>
+      </Position21>
+      <Position22>
+        <Filename Value="UberPDFExample.Forms.Main.pas"/>
+        <Caret TopLine="106"/>
+      </Position22>
+      <Position23>
+        <Filename Value="UberPDFExample.Forms.Main.pas"/>
+        <Caret Line="60" Column="42" TopLine="52"/>
+      </Position23>
+      <Position24>
+        <Filename Value="UberPDFExample.Examples.SplitDocument.pas"/>
+        <Caret TopLine="109"/>
+      </Position24>
+      <Position25>
+        <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
+        <Caret Line="54" Column="5" TopLine="42"/>
+      </Position25>
+      <Position26>
+        <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
+        <Caret Line="30" TopLine="3"/>
+      </Position26>
+      <Position27>
+        <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
+        <Caret Line="567" Column="8" TopLine="553"/>
+      </Position27>
+      <Position28>
+        <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
+        <Caret Line="8" Column="36"/>
+      </Position28>
+      <Position29>
+        <Filename Value="UberPDFExample.Forms.Main.pas"/>
+        <Caret Line="60" Column="42" TopLine="52"/>
       </Position29>
+      <Position30>
+        <Filename Value="UberPDFExample.Forms.Main.pas"/>
+        <Caret Line="129" Column="20" TopLine="115"/>
+      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
