@@ -47,7 +47,7 @@ I have 2 Raspberry Pi's and will, sometime in the future, have a gander at compi
 
 ### Build Script
 
-The build script `build.sh`, builds the various binaries.
+The build script, `build.sh`, builds the various binaries.
 
 At the moment it knows the following build modes:
 
@@ -62,7 +62,9 @@ At the moment it knows the following build modes:
 
 This is the Linux x68_64 (64 bits) build mode with dynamic linking.
 
-This is my main playground.
+This is my main playground, alongside the static linking below.
+
+Both are Linux 64 bits, just the type of linking differs.
 
 ### `lintel64-static`
 
