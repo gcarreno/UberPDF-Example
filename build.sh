@@ -14,7 +14,7 @@ LAZBUILD_BIN="$LAZARUS_DIR/lazbuild"
 ###
 # Script variables
 #
-BUILD_VERSION="0.1"
+BUILD_VERSION="0.3"
 BUILD_BIN="UberPDFExample"
 BUILD_LPI="$BUILD_BIN.lpi"
 BUILD_MODE=""
