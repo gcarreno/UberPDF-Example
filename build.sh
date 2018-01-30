@@ -43,12 +43,12 @@ function check_platform() {
                 "x86_64")
                     UBER_PLATFORM='lintel64'
                     ;;
-                "ARM-32")
-                    UBER_PLATFORM='linarm32'
-                    ;;
-                "ARM-64")
-                    UBER_PLATFORM='linarm64'
-                    ;;
+                #"ARM-32")
+                #    UBER_PLATFORM='linarm32'
+                #    ;;
+                #"ARM-64")
+                #    UBER_PLATFORM='linarm64'
+                #    ;;
             esac
             ;;
     esac
