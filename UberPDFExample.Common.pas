@@ -14,11 +14,11 @@ unit UberPDFExample.Common;
     {$LINKLIB libz.a}
   {$ENDIF}
   {$IFDEF WINDOWS}
-    {$LINKLIB libuberpdfsdk.obj}
-    {$LINKLIB libqpdf.obj}
-    {$LINKLIB libjpeg.obj}
-    {$LINKLIB libpng.obj}
-    {$LINKLIB libz.obj}
+    {$LINKLIB libuberpdfsdk.lib}
+    {$LINKLIB libqpdf.lib}
+    {$LINKLIB libjpeg.lib}
+    {$LINKLIB libpng.lib}
+    {$LINKLIB libz.lib}
   {$ENDIF}
 {$ENDIF}
 //------------------------------------------------------------------------------
@@ -69,10 +69,10 @@ const UBER_PDFSDK_SO_NAME = './uber/uberbaselibs/uberpdfsdk/lib/lintel64/gcc/lib
 // Update these paths acording to your path to the UberPDF folders
 //------------------------------------------------------------------------------
 {$IFDEF UBER_WINTEL32_MSVC_WINTEL32}
-const UBER_PDFSDK_SO_NAME = '.\uber\uberbaselibs\uberpdfsdk\lib\wintel32\msvc\???\libuberpdfsdkdyn.dll';
+const UBER_PDFSDK_SO_NAME = '.\uber\uberbaselibs\uberpdfsdk\lib\wintel32\msvc\libmd\libuberpdfsdkdyn.dll';
 {$ENDIF}
 {$IFDEF UBER_WINTEL64_MSVC_WINTEL64}
-const UBER_PDFSDK_SO_NAME = '.\uber\uberbaselibs\uberpdfsdk\lib\wintel64\msvc\???\libuberpdfsdkdyn.dll';
+const UBER_PDFSDK_SO_NAME = '.\uber\uberbaselibs\uberpdfsdk\lib\wintel64\msvc\libmd\libuberpdfsdkdyn.dll';
 {$ENDIF}
 //------------------------------------------------------------------------------
 {$ENDIF}

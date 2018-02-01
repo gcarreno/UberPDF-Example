@@ -2,7 +2,7 @@
 <CONFIG>
   <ProjectSession>
     <Version Value="11"/>
-    <BuildModes Count="7" Active="lintel64">
+    <BuildModes Count="7" Active="wintel32">
       <Item1 Name="lintel64-static">
         <CompilerOptions>
           <Version Value="11"/>
@@ -101,7 +101,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel64/msvc"/>
-            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel64/msvc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel64/msvc/libmd"/>
             <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/wintel64/msvc"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
@@ -119,6 +119,10 @@
           <Other>
             <CustomOptions Value="-dUBER_PDFSDK_USE_DYNAMIC_LIB_LOADER
 -dUBER_WINTEL64_MSVC_WINTEL64"/>
+            <OtherDefines Count="2">
+              <Define0 Value="UBER_WINTEL64_MSVC_WINTEL64"/>
+              <Define1 Value="UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER"/>
+            </OtherDefines>
           </Other>
         </CompilerOptions>
       </Item4>
@@ -130,7 +134,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel64/msvc"/>
-            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel64/msvc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel64/msvc/libmd;uber/3rdpartylibs/libjpeg/lib/wintel64/msvc/libmd;uber/3rdpartylibs/libpng/lib/wintel64/msvc/libmd;uber/3rdpartylibs/qpdf/lib/wintel64/msvc/libmd;uber/3rdpartylibs/zlib/lib/wintel64/msvc/libmd"/>
             <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/wintel64/msvc"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
@@ -158,7 +162,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel32/msvc"/>
-            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel32/msvc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel32/msvc/libmd"/>
             <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/wintel32/msvc"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
@@ -176,6 +180,10 @@
           <Other>
             <CustomOptions Value="-dUBER_PDFSDK_USE_DYNAMIC_LIB_LOADER
 -dUBER_WINTEL32_MSVC_WINTEL32"/>
+            <OtherDefines Count="2">
+              <Define0 Value="UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER"/>
+              <Define1 Value="UBER_WINTEL32_MSVC_WINTEL32"/>
+            </OtherDefines>
           </Other>
         </CompilerOptions>
       </Item6>
@@ -187,7 +195,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel32/msvc"/>
-            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel32/msvc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel32/msvc/libmd;uber/3rdpartylibs/libjpeg/lib/wintel32/msvc/libmd;uber/3rdpartylibs/libpng/lib/wintel32/msvc/libmd;uber/3rdpartylibs/qpdf/lib/wintel32/msvc/libmd;uber/3rdpartylibs/zlib/lib/wintel32/msvc/libmd"/>
             <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/wintel32/msvc"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
@@ -212,8 +220,8 @@
       <Unit0>
         <Filename Value="UberPDFExample.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="35" Y="10"/>
-        <UsageCount Value="39"/>
+        <CursorPos X="33" Y="5"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -222,21 +230,21 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="103"/>
-        <CursorPos X="61" Y="129"/>
-        <UsageCount Value="39"/>
+        <TopLine Value="82"/>
+        <CursorPos X="6" Y="21"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="UberPDFExample.Common.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="34"/>
-        <CursorPos Y="51"/>
-        <UsageCount Value="29"/>
+        <TopLine Value="59"/>
+        <CursorPos X="41" Y="62"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -245,7 +253,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="11"/>
         <CursorPos Y="32"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="33"/>
       </Unit3>
       <Unit4>
         <Filename Value="UberPDFExample.Examples.AddJPEG.pas"/>
@@ -253,7 +261,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos Y="32"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="33"/>
       </Unit4>
       <Unit5>
         <Filename Value="UberPDFExample.Examples.SplitDocument.pas"/>
@@ -261,7 +269,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos Y="32"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="29"/>
       </Unit5>
       <Unit6>
         <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
@@ -269,7 +277,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos Y="32"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="26"/>
       </Unit6>
       <Unit7>
         <Filename Value="uber/uberbaselibs/uberpdfsdk/include/lintel64/gcc/uber_base_unit_compiler_version_defs.pascal-inc"/>
@@ -296,6 +304,10 @@
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit9>
     </Units>
+    <OtherDefines Count="2">
+      <Define0 Value="UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER"/>
+      <Define1 Value="UBER_WINTEL32_MSVC_WINTEL32"/>
+    </OtherDefines>
     <JumpHistory Count="12" HistoryIndex="11">
       <Position1>
         <Filename Value="UberPDFExample.Forms.Main.pas"/>
@@ -343,7 +355,7 @@
       </Position11>
       <Position12>
         <Filename Value="UberPDFExample.Forms.Main.pas"/>
-        <Caret Line="129" Column="20" TopLine="115"/>
+        <Caret Line="129" Column="61" TopLine="103"/>
       </Position12>
     </JumpHistory>
     <RunParams>
