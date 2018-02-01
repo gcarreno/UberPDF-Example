@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 ###
 # Free Pascal and Lazarus variables
@@ -46,7 +46,9 @@ function check_platform() {
                 # Official Raspbian distribution is 32 bit only
                 # Will only ever compile for 32 bits
                 # NOTE: Needs to be re-assessed
-                #"armhf")
+                # armv6l - RaspberryPi 1 B+
+                # armv7l - RaspberryPi 3
+                #"armv6l"|"armv7l")
                 #    UBER_PLATFORM='linarm32'
                 #    ;;
             esac
@@ -55,6 +57,16 @@ function check_platform() {
 }
 
 function check_dependencies() {
+    UBER_PDF_LIB_DIR=$UBER_SDK_DIR/uberbaselibs/uberpdfsdk/lib/$UBER_PLATFORM/gcc/librtl
+    case "$BUILD_MODE" in
+        *-static)
+            UBER_PDF_LIB=$UBER_PDF_LIB_DIR/libuberpdfsdk.a
+            ;;
+        *)
+            UBER_PDF_LIB=$UBER_PDF_LIB_DIR/libuberpdfsdkdyn.so
+            ;;
+    esac
+
     echo -e "BUILD: Dependencies ..."
 
     echo -n "BUILD:   Checking lazbuild binary"
@@ -112,16 +124,6 @@ function clean_examples() {
 #}
 
 function build_example() {
-    UBER_PDF_LIB_DIR=$UBER_SDK_DIR/uberbaselibs/uberpdfsdk/lib/$UBER_PLATFORM/gcc/librtl
-    case "$BUILD_MODE" in
-        *-static)
-            UBER_PDF_LIB=$UBER_PDF_LIB_DIR/libuberpdfsdk.a
-            ;;
-        *)
-            UBER_PDF_LIB=$UBER_PDF_LIB_DIR/libuberpdfsdkdyn.so
-            ;;
-    esac
-
     echo -e "BUILD: Building..."
 
     check_dependencies
