@@ -62,7 +62,7 @@
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="UberPDFExample"/>
+      <Filename Value="UberPDFExample-lintel64"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/lintel64/gcc"/>

@@ -2,12 +2,12 @@
 <CONFIG>
   <ProjectSession>
     <Version Value="11"/>
-    <BuildModes Count="7" Active="wintel32">
+    <BuildModes Count="7" Active="lintel64">
       <Item1 Name="lintel64-static">
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
-            <Filename Value="UberPDFExample"/>
+            <Filename Value="UberPDFExample-lintel64-static"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/lintel64/gcc"/>
@@ -38,7 +38,7 @@
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
-            <Filename Value="UberPDFExample"/>
+            <Filename Value="UberPDFExample-lintel32"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/lintel32/gcc"/>
@@ -68,7 +68,7 @@
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
-            <Filename Value="UberPDFExample"/>
+            <Filename Value="UberPDFExample-lintel32-static"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/lintel32/gcc"/>
@@ -97,7 +97,7 @@
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
-            <Filename Value="UberPDFExample"/>
+            <Filename Value="UberPDFExample-wintel64"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel64/msvc"/>
@@ -130,7 +130,7 @@
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
-            <Filename Value="UberPDFExample"/>
+            <Filename Value="UberPDFExample-wintel64-static"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel64/msvc"/>
@@ -158,7 +158,7 @@
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
-            <Filename Value="UberPDFExample"/>
+            <Filename Value="UberPDFExample-wintel32"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel32/msvc"/>
@@ -191,7 +191,7 @@
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
-            <Filename Value="UberPDFExample"/>
+            <Filename Value="UberPDFExample-wintel32-static"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel32/msvc"/>
@@ -230,8 +230,8 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="82"/>
         <CursorPos X="6" Y="21"/>
         <UsageCount Value="40"/>
         <Loaded Value="True"/>
@@ -240,7 +240,6 @@
       <Unit2>
         <Filename Value="UberPDFExample.Common.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="59"/>
         <CursorPos X="41" Y="62"/>
@@ -304,10 +303,6 @@
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit9>
     </Units>
-    <OtherDefines Count="2">
-      <Define0 Value="UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER"/>
-      <Define1 Value="UBER_WINTEL32_MSVC_WINTEL32"/>
-    </OtherDefines>
     <JumpHistory Count="12" HistoryIndex="11">
       <Position1>
         <Filename Value="UberPDFExample.Forms.Main.pas"/>

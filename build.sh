@@ -43,11 +43,11 @@ function check_platform() {
                 "x86_64")
                     UBER_PLATFORM='lintel64'
                     ;;
-                #"ARM-32")
+                # Official Raspbian distribution is 32 bit only
+                # Will only ever compile for 32 bits
+                # NOTE: Needs to be re-assessed
+                #"armhf")
                 #    UBER_PLATFORM='linarm32'
-                #    ;;
-                #"ARM-64")
-                #    UBER_PLATFORM='linarm64'
                 #    ;;
             esac
             ;;
@@ -104,12 +104,12 @@ function clean_examples() {
     echo -e "BUILD: Removing old binaries DONE"
 }
 
-function copy_examples() {
-    echo -e "BUILD: Copy binaries..."
-    echo -e "BUILD:   executing: \$ mv $BUILD_BIN $BUILD_BIN-$BUILD_MODE"
-    mv "$BUILD_BIN" "$BUILD_BIN-$BUILD_MODE"
-    echo -e "BUILD: Copy binaries DONE"
-}
+#function copy_examples() {
+#    echo -e "BUILD: Copy binaries..."
+#    echo -e "BUILD:   executing: \$ mv $BUILD_BIN $BUILD_BIN-$BUILD_MODE"
+#    mv "$BUILD_BIN" "$BUILD_BIN-$BUILD_MODE"
+#    echo -e "BUILD: Copy binaries DONE"
+#}
 
 function build_example() {
     UBER_PDF_LIB_DIR=$UBER_SDK_DIR/uberbaselibs/uberpdfsdk/lib/$UBER_PLATFORM/gcc/librtl
@@ -136,7 +136,7 @@ function build_example() {
             echo -e "BUILD: Compiling DONE"
             BUILD_OK=1
             rm -f /tmp/temp_$BUILD_MODE.log > /dev/null 2>&1
-            copy_examples
+            #copy_examples
         else
             echo -e "BUILD ERROR: Compile did not succeed!"
             echo -e "BUILD ERORR: LOG '/tmp/temp_$BUILD_MODE.log'"
