@@ -2,7 +2,7 @@
 <CONFIG>
   <ProjectSession>
     <Version Value="11"/>
-    <BuildModes Count="7" Active="wintel64">
+    <BuildModes Count="7" Active="lintel64">
       <Item1 Name="lintel64-static">
         <CompilerOptions>
           <Version Value="11"/>
@@ -240,7 +240,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="90"/>
+        <TopLine Value="21"/>
         <CursorPos X="6" Y="21"/>
         <UsageCount Value="41"/>
         <Loaded Value="True"/>
@@ -251,8 +251,7 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="104"/>
-        <CursorPos X="41" Y="62"/>
+        <CursorPos X="33" Y="17"/>
         <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -313,10 +312,6 @@
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit9>
     </Units>
-    <OtherDefines Count="2">
-      <Define0 Value="UBER_WINTEL64_MSVC_WINTEL64"/>
-      <Define1 Value="UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER"/>
-    </OtherDefines>
     <JumpHistory Count="12" HistoryIndex="11">
       <Position1>
         <Filename Value="UberPDFExample.Forms.Main.pas"/>

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ###
 # Free Pascal and Lazarus variables
@@ -109,8 +109,8 @@ function check_dependencies() {
 
 function clean_examples() {
     echo -e "BUILD: Removing old binaries..."
-    echo -e "BUILD:   executing: \$ rm -f $BUILD_BIN"
-    rm -f "$BUILD_BIN"
+    #echo -e "BUILD:   executing: \$ rm -f $BUILD_BIN"
+    #rm -f "$BUILD_BIN"
     echo -e "BUILD:   executing: \$ rm -f $BUILD_BIN-$BUILD_MODE"
     rm -f "$BUILD_BIN-$BUILD_MODE"
     echo -e "BUILD: Removing old binaries DONE"
