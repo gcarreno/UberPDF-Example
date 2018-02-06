@@ -239,6 +239,7 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="21"/>
         <CursorPos X="6" Y="21"/>
@@ -249,7 +250,6 @@
       <Unit2>
         <Filename Value="UberPDFExample.Common.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <CursorPos X="33" Y="17"/>
         <UsageCount Value="31"/>

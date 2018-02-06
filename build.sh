@@ -37,7 +37,7 @@ function check_platform() {
     case "$UBER_OS" in
         "Linux")
             case "$UBER_ARCH" in
-                "i386"|"i686")
+                "i[3456]86")
                     UBER_PLATFORM='lintel32'
                     ;;
                 "x86_64")
