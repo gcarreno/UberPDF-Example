@@ -3,11 +3,12 @@ object frmMain: TfrmMain
   Height = 497
   Top = 250
   Width = 973
-  Caption = 'ÜberPDF Example'
+  Caption = 'ÜberPDF Example based on v1.1'
   ClientHeight = 497
   ClientWidth = 973
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  Position = poDefault
   object psMain: TPairSplitter
     Left = 0
     Height = 497

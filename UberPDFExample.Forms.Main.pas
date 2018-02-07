@@ -96,6 +96,8 @@ implementation
 { TfrmMain }
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
+  Top := 100;
+  Left := 100;
   LogClear;
   if (LoadUberPDFSdk()) then begin
     Log('LoadUberPDFSdk() Succeeded');
