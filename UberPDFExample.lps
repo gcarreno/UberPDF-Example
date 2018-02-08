@@ -2,7 +2,7 @@
 <CONFIG>
   <ProjectSession>
     <Version Value="11"/>
-    <BuildModes Count="9" Active="linarm32-static">
+    <BuildModes Count="9" Active="lintel64">
       <Item1 Name="lintel64-static">
         <CompilerOptions>
           <Version Value="11"/>
@@ -148,7 +148,7 @@
             <LinkSmart Value="True"/>
             <Options>
               <PassLinkerOptions Value="True"/>
-              <LinkerOptions Value="-lc -lm"/>
+              <LinkerOptions Value="-lc -lm -lstdc++ -lgcc_s"/>
             </Options>
           </Linking>
           <Other>
