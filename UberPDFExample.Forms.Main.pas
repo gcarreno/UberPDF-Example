@@ -53,20 +53,21 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, PairSplitter, StdCtrls,
-  UberPDFExample.Common,
-  UberPDFExample.Examples.HelloWorld,
-  UberPDFExample.Examples.AddJPEG,
-  UberPDFExample.Examples.SplitDocument,
+  ActnList, StdActns, UberPDFExample.Common, UberPDFExample.Examples.HelloWorld,
+  UberPDFExample.Examples.AddJPEG, UberPDFExample.Examples.SplitDocument,
   UberPDFExample.Examples.StampedDocument;
 
 type
 
 { TfrmMain }
   TfrmMain = class(TForm)
+    alMain: TActionList;
     btnEx_HelloWorld: TButton;
     btnEx_AddJPG: TButton;
     btnEx_SplitDocument: TButton;
     btnEx_StampedDocument: TButton;
+    actFileExit: TFileExit;
+    lblFileQuit: TLabel;
     lblHeader: TLabel;
     memlog: TMemo;
     psMain: TPairSplitter;
@@ -91,6 +92,9 @@ var
 
 implementation
 
+uses
+  LCLType;
+
 {$R *.lfm}
 
 { TfrmMain }
@@ -98,6 +102,14 @@ procedure TfrmMain.FormCreate(Sender: TObject);
 begin
   Top := 100;
   Left := 100;
+{$IFDEF LINUX}
+  actFileExit.ShortCut := KeyToShortCut(VK_Q, [ssCtrl]);
+  lblFileQuit.Caption := 'To quit: Ctrl+Q, Alt+F4';
+{$ENDIF}
+{$IFDEF WINDOWS}
+  actFileExit.ShortCut := KeyToShortCut(VK_X, [ssAlt]);
+  lblFileQuit.Caption := 'To quit: Alt+X, Alt+F4';
+{$ENDIF}
   LogClear;
   if (LoadUberPDFSdk()) then begin
     Log('LoadUberPDFSdk() Succeeded');

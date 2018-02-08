@@ -291,7 +291,7 @@
         <Filename Value="UberPDFExample.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="33" Y="5"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -300,21 +300,21 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="59"/>
-        <CursorPos X="15" Y="100"/>
-        <UsageCount Value="42"/>
+        <TopLine Value="86"/>
+        <CursorPos Y="102"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="UberPDFExample.Common.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="51"/>
         <CursorPos X="71" Y="75"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -323,7 +323,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="11"/>
         <CursorPos Y="32"/>
-        <UsageCount Value="35"/>
+        <UsageCount Value="36"/>
       </Unit3>
       <Unit4>
         <Filename Value="UberPDFExample.Examples.AddJPEG.pas"/>
@@ -331,7 +331,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos Y="32"/>
-        <UsageCount Value="35"/>
+        <UsageCount Value="36"/>
       </Unit4>
       <Unit5>
         <Filename Value="UberPDFExample.Examples.SplitDocument.pas"/>
@@ -339,7 +339,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos Y="32"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="32"/>
       </Unit5>
       <Unit6>
         <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
@@ -347,7 +347,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos Y="32"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="29"/>
       </Unit6>
       <Unit7>
         <Filename Value="uber/uberbaselibs/uberpdfsdk/include/lintel64/gcc/uber_base_unit_compiler_version_defs.pascal-inc"/>
@@ -374,7 +374,7 @@
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit9>
     </Units>
-    <JumpHistory Count="12" HistoryIndex="11">
+    <JumpHistory Count="14" HistoryIndex="13">
       <Position1>
         <Filename Value="UberPDFExample.Forms.Main.pas"/>
         <Caret Line="77" Column="41" TopLine="66"/>
@@ -423,6 +423,14 @@
         <Filename Value="UberPDFExample.Forms.Main.pas"/>
         <Caret Line="129" Column="61" TopLine="103"/>
       </Position12>
+      <Position13>
+        <Filename Value="UberPDFExample.Forms.Main.pas"/>
+        <Caret Line="95" Column="11" TopLine="86"/>
+      </Position13>
+      <Position14>
+        <Filename Value="UberPDFExample.Forms.Main.pas"/>
+        <Caret Line="94" Column="11" TopLine="85"/>
+      </Position14>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

@@ -27,7 +27,7 @@ object frmMain: TfrmMain
       object btnEx_HelloWorld: TButton
         Left = 8
         Height = 29
-        Top = 104
+        Top = 136
         Width = 157
         AutoSize = True
         Caption = 'Example: Hello World'
@@ -38,7 +38,7 @@ object frmMain: TfrmMain
       object btnEx_AddJPG: TButton
         Left = 8
         Height = 29
-        Top = 136
+        Top = 168
         Width = 134
         AutoSize = True
         Caption = 'Example: Add JPG'
@@ -56,7 +56,7 @@ object frmMain: TfrmMain
       object btnEx_SplitDocument: TButton
         Left = 8
         Height = 29
-        Top = 168
+        Top = 200
         Width = 180
         AutoSize = True
         Caption = 'Example: Spilt Document'
@@ -66,12 +66,20 @@ object frmMain: TfrmMain
       object btnEx_StampedDocument: TButton
         Left = 8
         Height = 29
-        Top = 200
+        Top = 232
         Width = 210
         AutoSize = True
         Caption = 'Example: Stamped Document'
         OnClick = btnEx_StampedDocumentClick
         TabOrder = 3
+      end
+      object lblFileQuit: TLabel
+        Left = 8
+        Height = 17
+        Top = 104
+        Width = 50
+        Caption = 'To quit:'
+        ParentColor = False
       end
     end
     object pssLog: TPairSplitterSide
@@ -91,6 +99,15 @@ object frmMain: TfrmMain
         ScrollBars = ssAutoVertical
         TabOrder = 0
       end
+    end
+  end
+  object alMain: TActionList
+    Left = 8
+    Top = 408
+    object actFileExit: TFileExit
+      Category = 'File'
+      Caption = 'E&xit'
+      Hint = 'Exit'
     end
   end
 end
