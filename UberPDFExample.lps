@@ -2,7 +2,7 @@
 <CONFIG>
   <ProjectSession>
     <Version Value="11"/>
-    <BuildModes Count="7" Active="lintel64">
+    <BuildModes Count="8" Active="linarm32">
       <Item1 Name="lintel64-static">
         <CompilerOptions>
           <Version Value="11"/>
@@ -224,6 +224,35 @@
           </Other>
         </CompilerOptions>
       </Item7>
+      <Item8 Name="linarm32">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample-linarm32"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/linarm32/gcc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/linarm32/gcc/librtl"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/linarm32/gcc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="arm"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <LinkSmart Value="True"/>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUseCThreads
+-dUBER_PDFSDK_USE_DYNAMIC_LIB_LOADER
+-dUBER_LINARM32_GCC_LINARM32"/>
+          </Other>
+        </CompilerOptions>
+      </Item8>
     </BuildModes>
     <Units Count="10">
       <Unit0>
@@ -239,9 +268,8 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="92"/>
+        <TopLine Value="59"/>
         <CursorPos X="15" Y="100"/>
         <UsageCount Value="41"/>
         <Loaded Value="True"/>
@@ -250,8 +278,10 @@
       <Unit2>
         <Filename Value="UberPDFExample.Common.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="33" Y="17"/>
+        <TopLine Value="51"/>
+        <CursorPos X="71" Y="75"/>
         <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit2>

@@ -68,6 +68,17 @@ const UBER_PDFSDK_SO_NAME = './uber/uberbaselibs/uberpdfsdk/lib/lintel64/gcc/lib
 //------------------------------------------------------------------------------
 // Update these paths acording to your path to the UberPDF folders
 //------------------------------------------------------------------------------
+{$IFDEF UBER_LINARM32_GCC_LINARM32}
+const UBER_PDFSDK_SO_NAME = './uber/uberbaselibs/uberpdfsdk/lib/linarm32/gcc/librtl/libuberpdfsdkdyn.so';
+{$ENDIF}
+{$IFDEF UBER_LINARM64_GCC_LINARM64}
+const UBER_PDFSDK_SO_NAME = './uber/uberbaselibs/uberpdfsdk/lib/linarm64/gcc/librtl/libuberpdfsdkdyn.so';
+{$ENDIF}
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Update these paths acording to your path to the UberPDF folders
+//------------------------------------------------------------------------------
 {$IFDEF UBER_WINTEL32_MSVC_WINTEL32}
 const UBER_PDFSDK_SO_NAME = '.\uber\uberbaselibs\uberpdfsdk\lib\wintel32\msvc\libmd\libuberpdfsdkdyn.dll';
 {$ENDIF}
