@@ -48,9 +48,9 @@ function check_platform() {
                 # NOTE: Needs to be re-assessed
                 # armv6l - RaspberryPi 1 B+
                 # armv7l - RaspberryPi 3
-                #"armv6l"|"armv7l")
-                #    UBER_PLATFORM='linarm32'
-                #    ;;
+                "armv6l"|"armv7l")
+                    UBER_PLATFORM='linarm32'
+                    ;;
             esac
             ;;
     esac
@@ -131,8 +131,8 @@ function build_example() {
     if [ "x$UBER_DEPS_OK" = "x1" ]; then
         clean_examples
         echo -e "BUILD: Compiling..."
-        echo -e "BUILD:   executing: \$ $LAZBUILD_BIN -B --bm=$UBER_PLATFORM $BUILD_LPI"
-        $LAZBUILD_BIN -B --bm=$BUILD_MODE $BUILD_LPI > /tmp/temp_$BUILD_MODE.log 2>&1
+        echo -e "BUILD:   executing: \$ $LAZBUILD_BIN -r -B --bm=$UBER_PLATFORM $BUILD_LPI"
+        $LAZBUILD_BIN -r -B --bm=$BUILD_MODE $BUILD_LPI > /tmp/temp_$BUILD_MODE.log 2>&1
 
         if [ $? = 0 ]; then
             echo -e "BUILD: Compiling DONE"
@@ -186,6 +186,18 @@ case "$1" in
         BUILD_MODE="$1"
         build_example
         ;;
+    "linarm32")
+        echo -e "BUILD: Will build for 'linarm32'."
+        UBER_PLATFORM="$1"
+        BUILD_MODE="$1"
+        build_example
+        ;;
+    "linarm32-static")
+        echo -e "BUILD: Will build for 'linarm32'."
+        UBER_PLATFORM="lintel32"
+        BUILD_MODE="$1"
+        build_example
+        ;;
     "-h"|"--help")
         echo -e "This script is aware of the folowing build modes:\n"
         echo -e "\tlintel64:        Linux 64 bits, Intel."
@@ -194,8 +206,8 @@ case "$1" in
         echo -e "\tlintel32-static: Linux 32 bits, Intel, static linking."
         #echo -e "\tlinarm64:        Linux 64 bits, ARM."
         #echo -e "\tlinarm64-static: Linux 64 bits, ARM, static linking."
-        #echo -e "\tlinarm32:        Linux 32 bits, ARM."
-        #echo -e "\tlinarm32-static: Linux 32 bits, ARM, static linking.\n"
+        echo -e "\tlinarm32:        Linux 32 bits, ARM."
+        echo -e "\tlinarm32-static: Linux 32 bits, ARM, static linking.\n"
         echo -e "Options:\n"
         echo -e "\t-h, --help:      Prints this help message."
         echo -e "\t-v, --version:   Prints this build script version.\n"
