@@ -2,7 +2,7 @@
 <CONFIG>
   <ProjectSession>
     <Version Value="11"/>
-    <BuildModes Count="9" Active="lintel64">
+    <BuildModes Count="9" Active="linarm32-static">
       <Item1 Name="lintel64-static">
         <CompilerOptions>
           <Version Value="11"/>
@@ -148,7 +148,7 @@
             <LinkSmart Value="True"/>
             <Options>
               <PassLinkerOptions Value="True"/>
-              <LinkerOptions Value="-lc -lm -lstdc++ -lgcc_s"/>
+              <LinkerOptions Value="-lc -lm"/>
             </Options>
           </Linking>
           <Other>
@@ -291,7 +291,7 @@
         <Filename Value="UberPDFExample.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="33" Y="5"/>
-        <UsageCount Value="41"/>
+        <UsageCount Value="42"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -303,7 +303,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="59"/>
         <CursorPos X="15" Y="100"/>
-        <UsageCount Value="41"/>
+        <UsageCount Value="42"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -314,7 +314,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="51"/>
         <CursorPos X="71" Y="75"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="32"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -323,7 +323,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="11"/>
         <CursorPos Y="32"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="35"/>
       </Unit3>
       <Unit4>
         <Filename Value="UberPDFExample.Examples.AddJPEG.pas"/>
@@ -331,7 +331,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos Y="32"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="35"/>
       </Unit4>
       <Unit5>
         <Filename Value="UberPDFExample.Examples.SplitDocument.pas"/>
@@ -339,7 +339,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos Y="32"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="31"/>
       </Unit5>
       <Unit6>
         <Filename Value="UberPDFExample.Examples.StampedDocument.pas"/>
@@ -347,7 +347,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos Y="32"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="28"/>
       </Unit6>
       <Unit7>
         <Filename Value="uber/uberbaselibs/uberpdfsdk/include/lintel64/gcc/uber_base_unit_compiler_version_defs.pascal-inc"/>
