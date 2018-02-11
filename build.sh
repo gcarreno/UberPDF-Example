@@ -153,6 +153,24 @@ function build_example() {
     echo -e "BUILD: Building DONE\n"
 }
 
+function usage() {
+    echo -e "This script is aware of the folowing build modes:\n"
+    echo -e "\tlintel64:        Linux 64 bits, Intel."
+    echo -e "\tlintel64-static: Linux 64 bits, Intel, static linking."
+    echo -e "\tlintel32:        Linux 32 bits, Intel."
+    echo -e "\tlintel32-static: Linux 32 bits, Intel, static linking."
+    #echo -e "\tlinarm64:        Linux 64 bits, ARM."
+    #echo -e "\tlinarm64-static: Linux 64 bits, ARM, static linking."
+    echo -e "\tlinarm32:        Linux 32 bits, ARM."
+    echo -e "\tlinarm32-static: Linux 32 bits, ARM, static linking.\n"
+    echo -e "Options:\n"
+    echo -e "\t-h, --help:      Prints this help message."
+    echo -e "\t-v, --version:   Prints this build script version.\n"
+    echo -e "Note: If no parameters are provided, script will"
+    echo -e "      auto-detect the build mode."
+    echo
+}
+
 ###
 # MAIN
 #
@@ -199,29 +217,20 @@ case "$1" in
         build_example
         ;;
     "-h"|"--help")
-        echo -e "This script is aware of the folowing build modes:\n"
-        echo -e "\tlintel64:        Linux 64 bits, Intel."
-        echo -e "\tlintel64-static: Linux 64 bits, Intel, static linking."
-        echo -e "\tlintel32:        Linux 32 bits, Intel."
-        echo -e "\tlintel32-static: Linux 32 bits, Intel, static linking."
-        #echo -e "\tlinarm64:        Linux 64 bits, ARM."
-        #echo -e "\tlinarm64-static: Linux 64 bits, ARM, static linking."
-        echo -e "\tlinarm32:        Linux 32 bits, ARM."
-        echo -e "\tlinarm32-static: Linux 32 bits, ARM, static linking.\n"
-        echo -e "Options:\n"
-        echo -e "\t-h, --help:      Prints this help message."
-        echo -e "\t-v, --version:   Prints this build script version.\n"
-        echo -e "Note: If no parameters are provided, script will"
-        echo -e "      auto-detect the build mode."
-        echo
+        usage
         ;;
     "-v"|"--version")
         echo -e "BUILD: Version $BUILD_VERSION\n"
         ;;
-    *)
+    "")
         echo -e "BUILD: No known platform suggested, will build for '$UBER_PLATFORM'."
         BUILD_MODE="$UBER_PLATFORM"
         build_example
+        ;;
+    *)
+        echo -e "Unknown build mode \"$1\"."
+        echo
+        usage
         ;;
 esac
 ###
