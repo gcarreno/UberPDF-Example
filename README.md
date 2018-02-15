@@ -6,6 +6,7 @@
  * Lazarus 1.9.0
  * FPC 3.1.1
  * UberBuild under folder `uber`
+ * Necessary PDF files for examples under folder `PDF_files`
 
 ## Examples
 
@@ -37,13 +38,13 @@ It needs these PDF files at `PDF_files/DocumentToStamp.pdf` and `PDF_files/Platy
 
 The only Build Mode I'm currently using and testing is the `lintel64`.
 
-I would apreciate some help in testing `lintel32*`, `wintel32*` and `wintel64*` build modes.
+I would apreciate some help in testing `lintel32*` build mode.
 
 I'm attempting to make this as complete as possible under my current test environment in terms of the dynamic libraries paths in all relevant places.
 
-I have Lazarus configured with cross-compiling for win32 and win64 but I didn't test the ÜberBuild™ with any Windows versions.
+**DONE**: I have Lazarus configured with cross-compiling for win32 and win64 but I didn't test the ÜberBuild™ with any Windows versions.
 
-I have 2 Raspberry Pi's and will, sometime in the future, have a gander at compiling this on them. I will add the apropriate Build Options once I do get around it.
+**DONE**: I have 2 Raspberry Pi's and will, sometime in the future, have a gander at compiling this on them. I will add the apropriate Build Options once I do get around it.
 
 ### Build Script
 
@@ -83,11 +84,17 @@ This is the Linux i386 (32 bits) build mode with dynamic linking.
 
 This is the Linux i386 (32 bits) build mode with static linking.
 
+### `linarm32`
+
+This is the Linux ARM (32 bits) build mode with dynamic linking.
+
+### `linarm32-static`
+
+This is the Linux ARM (32 bits) build mode with static linking.
+
 ### `wintel64`
 
 This is the Windows 64 bits build mode with dynamic linking.
-
-**Status**: Fiddling with Microsoft Visual C (MSVC) Community to get UberSDK built.
 
 ### `wintel64-static`
 
@@ -107,16 +114,6 @@ This is the Windows 32 bits build mode with static linking.
 
 This is the Linux ARM (64 bits) build mode with dynamic linking.
 
-**Status**: Need to re-install my Raspberry Pi on a bigger SD Card.
-
 ### `linarm64-static`
 
 This is the Linux ARM (64 bits) build mode with static linking.
-
-### `linarm32`
-
-This is the Linux ARM (32 bits) build mode with dynamic linking.
-
-### `linarm32-static`
-
-This is the Linux ARM (32 bits) build mode with static linking.
