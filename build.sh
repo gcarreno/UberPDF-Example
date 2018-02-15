@@ -116,13 +116,6 @@ function clean_examples() {
     echo -e "BUILD: Removing old binaries DONE"
 }
 
-#function copy_examples() {
-#    echo -e "BUILD: Copy binaries..."
-#    echo -e "BUILD:   executing: \$ mv $BUILD_BIN $BUILD_BIN-$BUILD_MODE"
-#    mv "$BUILD_BIN" "$BUILD_BIN-$BUILD_MODE"
-#    echo -e "BUILD: Copy binaries DONE"
-#}
-
 function build_example() {
     echo -e "BUILD: Building..."
 

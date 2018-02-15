@@ -55,8 +55,11 @@ At the moment it knows the following build modes:
  2. lintel64-static (Linux, Intel, 64 bits, static linking)
  3. lintel32        (Linux, Intel, 32 bits)
  4. lintel32-static (Linux, Intel, 32 bits, static linking)
- 5. -h, --help      (Prints the help message)
- 6. -v, --version   (Prints the script version)
+ 5. linarm32        (Linux, ARM, 32 bits)
+ 6. linarm32-static (Linux, ARM, 32 bits, static linking)
+  * Still trying to get this one working.
+ 7. -h, --help      (Prints the help message)
+ 8. -v, --version   (Prints the script version)
 
 ### `lintel64`
 
