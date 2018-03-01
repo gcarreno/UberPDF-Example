@@ -25,8 +25,359 @@
       <Language Value="0809"/>
       <StringTable LegalCopyright="Gustavo Carreno (c) 2018"/>
     </VersionInfo>
-    <BuildModes Count="1">
+    <BuildModes Count="11">
       <Item1 Name="Default" Default="True"/>
+      <Item2 Name="lintel64">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample-lintel64"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/lintel64/gcc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/lintel64/gcc/librtl"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/lintel64/gcc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUseCThreads
+-dUBER_PDFSDK_USE_DYNAMIC_LIB_LOADER
+-dUBER_LINTEL64_GCC_LINTEL64"/>
+          </Other>
+        </CompilerOptions>
+      </Item2>
+      <Item3 Name="lintel64-static">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample-lintel64-static"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/lintel64/gcc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/lintel64/gcc/librtl;uber/3rdpartylibs/qpdf/lib/lintel64/gcc/librtl;uber/3rdpartylibs/libjpeg/lib/lintel64/gcc/librtl;uber/3rdpartylibs/libpng/lib/lintel64/gcc/librtl;uber/3rdpartylibs/zlib/lib/lintel64/gcc/librtl"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/lintel64/gcc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <PassLinkerOptions Value="True"/>
+              <LinkerOptions Value="-lc -lm -lstdc++ -lgcc_s"/>
+            </Options>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUseCThreads
+-dUBER_LINTEL64_GCC_LINTEL64"/>
+          </Other>
+        </CompilerOptions>
+      </Item3>
+      <Item4 Name="lintel32">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample-lintel32"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/lintel32/gcc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/lintel32/gcc/librtl"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/lintel32/gcc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUseCThreads
+-dUBER_PDFSDK_USE_DYNAMIC_LIB_LOADER
+-dUBER_LINTEL32_GCC_LINTEL32"/>
+          </Other>
+        </CompilerOptions>
+      </Item4>
+      <Item5 Name="lintel32-static">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample-lintel32-static"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/lintel32/gcc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/lintel32/gcc/librtl;uber/3rdpartylibs/qpdf/lib/lintel32/gcc/librtl;uber/3rdpartylibs/libjpeg/lib/lintel32/gcc/librtl;uber/3rdpartylibs/libpng/lib/lintel32/gcc/librtl;uber/3rdpartylibs/zlib/lib/lintel32/gcc/librtl"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/lintel32/gcc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <PassLinkerOptions Value="True"/>
+              <LinkerOptions Value="-lc -lm -lstdc++ -lgcc_s"/>
+            </Options>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUseCThreads
+-dUBER_LINTEL32_GCC_LINTEL32"/>
+          </Other>
+        </CompilerOptions>
+      </Item5>
+      <Item6 Name="linarm32">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample-linarm32"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/linarm32/gcc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/linarm32/gcc/librtl"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/linarm32/gcc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="arm"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUseCThreads
+-dUBER_PDFSDK_USE_DYNAMIC_LIB_LOADER
+-dUBER_LINARM32_GCC_LINARM32"/>
+          </Other>
+        </CompilerOptions>
+      </Item6>
+      <Item7 Name="linarm32-static">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample-linarm32-static"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/linarm32/gcc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/linarm32/gcc/librtl;uber/3rdpartylibs/qpdf/lib/linarm32/gcc/librtl;uber/3rdpartylibs/libjpeg/lib/linarm32/gcc/librtl;uber/3rdpartylibs/libpng/lib/linarm32/gcc/librtl;uber/3rdpartylibs/zlib/lib/linarm32/gcc/librtl"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/linarm32/gcc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="arm"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <PassLinkerOptions Value="True"/>
+              <LinkerOptions Value="-lc -lm -lstdc++ -lgcc_s"/>
+            </Options>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUseCThreads
+-dUBER_LINARM32_GCC_LINARM32"/>
+          </Other>
+        </CompilerOptions>
+      </Item7>
+      <Item8 Name="wintel64">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample-wintel64"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel64/msvc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel64/msvc/libmd"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/wintel64/msvc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUBER_PDFSDK_USE_DYNAMIC_LIB_LOADER
+-dUBER_WINTEL64_MSVC_WINTEL64"/>
+            <OtherDefines Count="2">
+              <Define0 Value="UBER_WINTEL64_MSVC_WINTEL64"/>
+              <Define1 Value="UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER"/>
+            </OtherDefines>
+          </Other>
+        </CompilerOptions>
+      </Item8>
+      <Item9 Name="wintel64-static">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample-wintel64-static"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel64/msvc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel64/msvc/libmd;uber/3rdpartylibs/libjpeg/lib/wintel64/msvc/libmd;uber/3rdpartylibs/libpng/lib/wintel64/msvc/libmd;uber/3rdpartylibs/qpdf/lib/wintel64/msvc/libmd;uber/3rdpartylibs/zlib/lib/wintel64/msvc/libmd"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/wintel64/msvc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUBER_WINTEL64_MSVC_WINTEL64"/>
+          </Other>
+        </CompilerOptions>
+      </Item9>
+      <Item10 Name="wintel32">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample-wintel32"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel32/msvc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel32/msvc/libmd"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/wintel32/msvc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUBER_PDFSDK_USE_DYNAMIC_LIB_LOADER
+-dUBER_WINTEL32_MSVC_WINTEL32"/>
+            <OtherDefines Count="2">
+              <Define0 Value="UBER_PDFSDK_USE_DYNAMIC_LIB_LOADER"/>
+              <Define1 Value="UBER_WINTEL32_MSVC_WINTEL32"/>
+            </OtherDefines>
+          </Other>
+        </CompilerOptions>
+      </Item10>
+      <Item11 Name="wintel32-static">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="UberPDFExample-wintel32-static"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);uber/uberbaselibs/uberpdfsdk/include/wintel32/msvc"/>
+            <Libraries Value="uber/uberbaselibs/uberpdfsdk/lib/wintel32/msvc/libmd;uber/3rdpartylibs/libjpeg/lib/wintel32/msvc/libmd;uber/3rdpartylibs/libpng/lib/wintel32/msvc/libmd;uber/3rdpartylibs/qpdf/lib/wintel32/msvc/libmd;uber/3rdpartylibs/zlib/lib/wintel32/msvc/libmd"/>
+            <OtherUnitFiles Value="uber/uberbaselibs/uberpdfsdk/include/wintel32/msvc"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+            </Optimizations>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dUBER_WINTEL32_MSVC_WINTEL32"/>
+          </Other>
+        </CompilerOptions>
+      </Item11>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
