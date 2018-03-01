@@ -1,6 +1,7 @@
 /lib
 /backup
 /uber
+*.res
 Paths.txt
 UberPDFExample
 UberPDFExample.exe
